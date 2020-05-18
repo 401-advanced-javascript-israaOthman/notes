@@ -2,7 +2,10 @@
 ## Node Ecosystem
 ### Author: Israa Othman
 ### Links and Resources
-- [submission PR](https://github.com/401-advanced-javascript-israaOthman/notes/pull/2)
+
+- [submission PR for lab01](https://github.com/401-advanced-javascript-israaOthman/notes/pull/2)
+- [submission PR for lab02](https://github.com/401-advanced-javascript-israaOthman/notes/pull/3)
+
 ### Modules
 #### `Node.js`
 ### Packages
