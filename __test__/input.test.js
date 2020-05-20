@@ -20,4 +20,23 @@ describe('Input Module',()=>{
     expect(userInput.getNote(true)).toEqual(  'ERROR : please Enter a vaild message inside qoutation ');
   });
 
+  it('showList() in case all categories',()=>{
+    let userInput = new Input();
+    expect(userInput.showList(true)).toEqual(  {action: 'list' , cat : 'all'});
+  });
+
+  it('showList() in case specific category',()=>{
+    let userInput = new Input();
+    expect(userInput.showList('school')).toEqual( {action: 'list' , cat : 'school' });
+  });
+
+  it('deleteNote() with ID ',()=>{
+    let userInput = new Input();
+    expect(userInput.deleteNote('6h58630sfr2356')).toEqual(  {action: 'delete' , id : '6h58630sfr2356' });
+  });
+  it('deleteNote() without ID ',()=>{
+    let userInput = new Input();
+    expect(userInput.deleteNote(true)).toEqual( 'ERROR : please Enter a ID for the Note you want to delete ');
+  });
+
 });
