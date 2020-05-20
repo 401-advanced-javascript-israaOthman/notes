@@ -7,4 +7,5 @@ const userNotes = mongoose.Schema({
   category : {type : String , required : true},
 });
 
-module.exports = mongoose.model('UserNotes',userNotes);
+const mod = mongoose.model('UserNotes',userNotes);
+module.exports = mod;

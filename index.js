@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 'use strict';
 
+const mongoose = require('mongoose');
+
 const Input = require('./lib/input.js');
 const Notee = require('./lib/notes.js');
-const mongoose = require('mongoose');
 
 
 
@@ -17,10 +18,14 @@ mongoose.connect(MONGOOSE_URI, {
 
 
 async function activate() {
-  const txt = new Input();
-  const note = new Notee();
-  await note.execute(txt);
-  mongoose.disconnect();
+  try{
+    const txt = new Input();
+    const note = new Notee();
+    await note.execute(txt);
+    mongoose.disconnect();
+  } catch(e){
+    console.log(e);
+  }
 }
   
 activate();
