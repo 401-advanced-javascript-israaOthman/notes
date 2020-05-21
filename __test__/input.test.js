@@ -12,7 +12,7 @@ describe('Input Module',()=>{
 
   it('getNote() in case wrong argument not(-a || --add) should return error msg',()=>{
     let userInput = new Input();
-    expect(userInput.getNote('error')).toEqual( 'ERROR : please Enter either -a or --add to add a note  ');
+    expect(userInput.getNote('error')).toEqual( 'ERROR : please Enter either -a or --add to add a note with --category \n or --list to show or --delete to delete  ');
   });
 
   it('getNote() in case didnt Enter Note ',()=>{
