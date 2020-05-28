@@ -24,8 +24,8 @@ class Collection{
     return await newRecord.save();
   }
 
-  async update(_id,record){
-    return await schema.findByIdAndUpdate(_id,record);
+  async update(id,record){
+    return await schema.findOneAndUpdate({ _id: id },{text: record });
   }
 
   async delete(_id){
